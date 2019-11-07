@@ -28,7 +28,9 @@ RCT_EXPORT_MODULE()
 
 - (UIView *)view
 {
-  return [RNDateTimePicker new];
+  RNDateTimePicker *datePicker = [RNDateTimePicker new];
+  [datePicker setValue:[UIColor whiteColor] forKeyPath:@"textColor"];
+  return datePicker;
 }
 
 RCT_EXPORT_VIEW_PROPERTY(date, NSDate)
